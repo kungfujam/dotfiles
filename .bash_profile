@@ -57,11 +57,11 @@ alias lsr='ls -Artls | tail -n 10'
 alias p='source activate py27'
 alias d='source deactivate'
 # Colourise ls
-alias ls='ls --color=auto'
+alias ls='ls -G'
 # Long list ls
-alias ll='ls -la --color=auto'
+alias ll='ls -laG'
 # List hidden
-alias l.='ls -d .* --color=auto'
+alias l.='ls -dG .*'
 
 
 # ============
