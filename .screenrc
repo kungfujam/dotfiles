@@ -1,0 +1,41 @@
+# Allow greater command memory
+defscrollback 1024
+
+# Vertical split with two on left
+# Resize right section to 100
+#
+# +---+---+
+# |   |   |
+# |---|   |
+# |   |   |
+# +---+---+
+#
+split -v
+screen bash
+title "main"
+split
+focus down
+screen bash
+title "interpreter" 
+focus right
+screen bash
+title "script"
+resize 120
+focus left
+
+## ctrl+a navigating regions
+bindkey "^j" focus down
+bindkey "^k" focus up
+bindkey "^h" focus left
+bindkey "^l" focus right
+
+# Not working
+## mouse tracking allows to switch region focus by clicking
+# mousetrack on
+
+# Only allows for whole screen use :(
+## Allow mouse to scroll screens
+# termcapinfo xterm* ti@:te@
+
+# Adding 256 colours
+term screen-256color
