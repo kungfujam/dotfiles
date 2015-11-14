@@ -1,5 +1,9 @@
-# Allow greater command memory
-defscrollback 1024
+# Two-line status, with the current window highlighted
+hardstatus alwayslastline
+hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
+
+# huge scrollback buffer
+defscrollback 5000
 
 # Vertical split with two on left
 # Resize right section to 100
